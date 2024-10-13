@@ -1,0 +1,26 @@
+{
+    "name": "deepstream-yolo11",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "remoteEnv": {
+        "DISPLAY": "${env:DISPLAY}"
+    },
+    "runArgs": [
+        "--net=host",
+        "--gpus=all"
+    ],
+    "privileged": true,
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-python.python",
+                "ms-python.isort",
+                "ms-python.balck-formatter"
+            ]
+        }
+    }
+
+}
